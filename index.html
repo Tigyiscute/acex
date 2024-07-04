@@ -53,19 +53,14 @@
             cursor: pointer;
         }
 
-        .icon-button img {
+        .icon-button img, .action-button img {
             width: 30px;
             height: 30px;
         }
 
-        .play-button {
-            color: #fff;
-            font-size: 20px;
-        }
-
-        .delete-button {
-            color: #fff;
-            font-size: 20px;
+        .play-button img {
+            width: 36px; /* Slightly larger for emphasis */
+            height: 36px;
         }
     </style>
 </head>
@@ -79,8 +74,8 @@
         </div>
         <div class="footer">
             <button class="icon-button"><img src="user-icon.png" alt="User Icon"></button>
-            <button class="action-button play-button">▶</button>
-            <button class="action-button delete-button">🗑</button>
+            <button class="action-button play-button"><img src="play-icon.png" alt="Play Icon"></button>
+            <button class="action-button delete-button"><img src="delete-icon.png" alt="Delete Icon"></button>
         </div>
     </div>
 </body>
