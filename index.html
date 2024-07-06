@@ -3,96 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACE X | iOS Executor</title>
+    <title>Panther UI</title>
     <style>
         body {
-            background-color: #0c0030;
-            color: #fff;
-            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #4b0082;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            font-family: Arial, sans-serif;
         }
-
         .container {
-            background: linear-gradient(145deg, #1a0048, #3a0088);
+            width: 800px;
+            height: 400px;
+            background: linear-gradient(135deg, #4b0082, #6a0dad);
             border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            width: 350px;
-            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
-
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #fff;
-            font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .main textarea {
-            width: 100%;
-            height: 120px;
-            border-radius: 10px;
-            border: none;
-            padding: 10px;
-            font-size: 16px;
-            background-color: #7c50a1;
-            color: #fff;
-            resize: none;
-            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .footer {
-            margin-top: 20px;
+        .header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            margin-bottom: 20px;
         }
-
-        .icon-button, .action-button {
-            background: none;
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url('your_logo_url_here') no-repeat center center/cover;
+        }
+        .title {
+            flex-grow: 1;
+            color: #fff;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+        .script-area {
+            width: 100%;
+            height: 100%;
+            background-color: #800080;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 18px;
+            outline: none;
+        }
+        .buttons {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
             border: none;
             cursor: pointer;
-            padding: 0;
         }
-
-        .icon-button img, .action-button img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.2s;
+        .delete-button {
+            background: url('delete_icon_url_here') no-repeat center center/cover;
         }
-
-        .icon-button img:hover, .action-button img:hover {
-            transform: scale(1.2);
-        }
-
-        .play-button img {
-            width: 36px; /* Slightly larger for emphasis */
-            height: 36px;
-        }
-
-        .icon-button img {
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        .play-button {
+            background: url('play_icon_url_here') no-repeat center center/cover;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>ACE X | iOS Executor</h1>
+            <div class="logo"></div>
+            <div class="title">Panther @PizzaRoblox</div>
+            <div class="icons">
+                <div class="icon" style="background: url('icon1_url_here') no-repeat center center/cover;"></div>
+                <div class="icon" style="background: url('icon2_url_here') no-repeat center center/cover;"></div>
+                <div class="icon" style="background: url('icon3_url_here') no-repeat center center/cover;"></div>
+            </div>
         </div>
-        <div class="main">
-            <textarea placeholder="Type Your Script Here"></textarea>
-        </div>
-        <div class="footer">
-            <button class="icon-button"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABXklEQVRIDd3VvyvEARgG8F+ZShvSBnHxBIVs0NLcJcQqKCtXjLpYEIymKiYuPCkocQU3aX6FpsLcJBVFb2Oj2Hif9eZfM8CEbg5wcyO7O4cWm6k6PN4Jg4ynAcD3xumZyLBkxG4kT4U/17FVpOrPZj+djRfLfB+K9OsaPp1GGovm7l+GClu5O/jdZ/nrRMrUMfs/VrcZw72bVDOMacU3ivAcU9AhwTbAVM2YBXOOG8AwzF7CDDaL4H7cyGfAOyXgW0F8UwwyqSowtdzixpw19HkTjFFgzG7zGf1OSnDNuID/MOBLrKdEPsfSuC9zOmHTmS5jhzPnhax7YNG5Adx7CGWq5zvmkJ2GQtxmm/0aO5i1O0AGXKwrze4i1LGbeAe3fddGmOcFcMrT+Wg57WOl7RkaPYQvAq5Hgb6jqR8CLB3Eu0TxDIXjBPozwWeFW2Jtgt5DdKPqg7z2s3QAAAAAElFTkSuQmCC" alt="User Icon"></button>
-            <button class="action-button play-button"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdElEQVRIDdWUPU8DURTHP+eRQUVSBW6SQoJpo5rZkEgG3UUlBPUwG0xsZuTvdmEMgnsYHdKSFCEpHQVX0UKoQ8gRUKBVKpGC0NPvufO/Jd5h73zGDAw++ch/v3PvMzN2RB0BtPK9JjsD7H7YZ6qG/Aae8Y61kXezBM0xZh+sz32Y6lJStcGxLsH2gD7nbVi+iF3cx0AT9kbVR4i3z3YxQxkS3ewZDhgbMBadg4Zl8AfIjW+BTgDc1ckNsT5BAMk3qzq8AdwfQuWVnhZhVXyLPGL5GSyGgWtcAosSyyYkxTAr0A6Rh/g3nsu8WYcbIQcYWaOWbcMhvi3e+dftZFN+8QBaBDnS4ZmkXQNVWJ85gncEtEFX2FdQpoFVFG13VsZItZNNF5meuvIneegDt7e6u4AnYHPq5Z80Xy+XXyW4O8C/3P19CF9e/8ofFqMf2tAQAAAABJRU5ErkJggg==" alt="Play Icon"></button>
-            <button class="action-button delete-button"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAABt0lEQVRIDe2Uv09UURiGn+dA04NFK0LBGysYiWIpwoSYYhuLRgpHaAbwoVYpWIRCLhUKS1sLFgUmlVUoPiDgg8hzMDCpEON5cTuSXZ29jr52WeyCOe8c055Xue3MydMDGfi3BiGRs95dyZ/ayclP3MgM9T80mym/M3phVLPy9Uq6Mj8t5BPaIdZAzZbER5G5V3zID2loEjAfm5DJJlYk5qsSWuxQpTMm91MoaV+Ks8GJZ3TzmJ5mcR7SRg4ZleAnXKD5d1LmTc1QGNvKl1nZOzFv4lhUiyPobfIEGbAs5A2SYPynqAWzUsUvWiFiRvJFiW2KftGbASQrgHqLeGbAEas4IqTSYlNpZcWWQ5BhhPlL5PKqlAqLsEqDTESu0SMDmEv4uHs2siHRqzJIE2/A16BnmPmSsjTF5FsUMMQOeB8QTVzBu6dKbifYC8B91CmqeFsI99RdjKy7JsmqYY+kQ71Q3mAFvwQvAGjHY1HlbPAWvBF6EvxW2J9AVHD2bKiaf4kTmADPx+wAF3MnxShsV+1B1tIOKAAAAAElFTkSuQmCC" alt="Delete Icon"></button>
+        <textarea class="script-area" placeholder="Enter Your Script Here"></textarea>
+        <div class="buttons">
+            <button class="button delete-button"></button>
+            <button class="button play-button"></button>
         </div>
     </div>
 </body>
